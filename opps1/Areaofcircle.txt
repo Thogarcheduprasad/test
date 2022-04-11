@@ -1,0 +1,18 @@
+
+
+namespace IntroductiontoCsharp_assignment
+{
+    internal class Areaofcircle
+    {
+        public static void Main()
+        {
+            double r, cir;
+            double PI = 3.14;
+            Console.WriteLine("input the raduis of the circle");
+            r=Convert.ToDouble(Console.ReadLine());
+            cir = 2 * PI * r;
+            Console.WriteLine("Parameter of {0} circle" + cir);
+            Console.ReadLine();
+        }
+    }
+}

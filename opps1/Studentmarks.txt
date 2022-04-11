@@ -1,0 +1,73 @@
+using System;
+
+
+namespace IntroductiontoCsharp_assignment
+{
+     class Studentmarks
+    {
+        public static void Main(string[] args)
+        {
+            // Declare a variable for marks and total and avg
+            int m1, m2, m3, m4, m5;
+            double avg, total;
+
+            // Enter subject1 marks
+            Console.WriteLine("Enter subject1 marks");
+            m1 = Convert.ToInt32(Console.ReadLine());
+
+            // Enter subject2 marks
+            Console.WriteLine("Enter subject2 marks");
+            m2 = Convert.ToInt32(Console.ReadLine());
+
+            //Enter subject3 marks
+            Console.WriteLine("Enter subject3 marks");
+            m3 = Convert.ToInt32(Console.ReadLine());
+
+            //Enter subject4 marks
+
+            Console.WriteLine("Enter subject4 marks");
+            m4 = Convert.ToInt32(Console.ReadLine());
+
+            //Enter subject5 marks
+
+            Console.WriteLine("Enter subject5 marks");
+            m5 = Convert.ToInt32(Console.ReadLine());
+
+            //Total marks
+            total = m1 + m2 + m3 + m4 + m5;
+            Console.WriteLine("Total MArks" + total);
+
+
+            //tot = Convert.ToInt32(Console.ReadLine());
+            avg = total / 5;
+            Console.WriteLine("avg" + avg);
+        if(m1>m2 || m1>m3 || m1>m4 || m1 > m5)
+                        {
+                Console.WriteLine("Highst marks" + m1);
+                
+            }
+         else if(m2>m3 || m2>m4 || m2>m5)
+                {
+                Console.WriteLine("highst marks " + m2);
+            }
+        else if(m3 > m4 || m3 > m5)
+                    {
+                Console.WriteLine("highst marks "+m3);
+            }
+        else if(m4 > m5)
+                    {
+                Console.WriteLine("highst marks"+m4);
+            }
+            
+        else
+            {
+                Console.WriteLine("highst marks" + m5);
+            }
+
+
+
+            
+        }
+
+    }
+}
