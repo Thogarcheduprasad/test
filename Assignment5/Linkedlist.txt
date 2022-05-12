@@ -1,0 +1,55 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+
+namespace Collection5
+{
+    internal class LinkedList
+    {
+        class Employees
+        {
+            public int epno;
+            public string epnam;
+            public double epsal;
+
+            public Employees(int epno, string epnam, double epsal)
+            {
+                this.epno = epno;
+                this.epnam = epnam;
+                this.epsal = epsal;
+            }
+        }
+
+        class LikedListOfEmployee
+        {
+            public static void Main()
+            {
+
+                List<Employees> l = new List<Employees>(5);
+
+                l.Add(new Employees(101, "Prasad", 40000));
+                l.Add(new Employees(102, "subbu", 60000));
+                l.Add(new Employees(103, "ravi", 20000));
+                l.Add(new Employees(104, "ashok", 100000));
+
+                Console.WriteLine("Number Of Employees In The List" + l.Count());
+
+
+                Console.WriteLine("Employee Detailes :");
+                foreach (var v in l)
+                {
+                    Console.WriteLine(+v.epno + " " + v.epnam + " " + v.epsal);
+
+                }
+                Console.ReadKey();
+
+
+
+            }
+
+
+        }
+
+    }
+}

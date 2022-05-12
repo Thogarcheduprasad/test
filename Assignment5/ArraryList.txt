@@ -1,0 +1,29 @@
+using System;
+using System.Collections;
+namespace Collection5
+{
+
+    class CollectionArrayList
+    {
+        public static void Main()
+        {
+            ArrayList al = new ArrayList();
+            al.Add("Prasad");
+            al.Add("Ayanrand");
+            al.Add("Chalam");
+            al.Add("SriSri");
+            al.Add("RGV");
+            al.Add("subbu");
+            Console.WriteLine(al.Capacity);
+
+            foreach (object o in al)
+            {
+                Console.WriteLine(o);
+
+            }
+
+            Console.ReadKey();
+        }
+    }
+
+}
