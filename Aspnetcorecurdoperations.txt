@@ -1,0 +1,60 @@
+Startapp
+---------------
+services.AddDbContext<EmployeeDbContext>(option => option.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")
+
+Appsetting
+--------------
+"ConnectionStrings": {
+    "DefaultConnection": "Server=LAPTOP-PT88L9AU\\SQLEXPRESS;Database=empdb;integrated security=SSPI;"
+  
+
+Employee.cs
+----------------
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace AspcoreCurdoperations.Models
+{
+    public class Employee
+    {
+        [Key]
+        public int EmpId { get; set; }
+        public string EmpName { get; set; }
+        public string Position { get; set; }
+        public string Location { get; set; }
+        public int Salary { get; set; }
+    }
+}
+
+
+EmployeeController
+--------------------------
+using AspcoreCurdoperations.Data;
+using AspcoreCurdoperations.Models;
+using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace AspcoreCurdoperations.Controllers
+{
+    public class EmployeeController1 : Controller
+    {
+        
+        private readonly EmployeeDbContext EmployeeDbContext;
+
+        public EmployeeController1(EmployeeDbContext db)
+        {
+            EmployeeDbContext = db;
+        }
+        public IActionResult Index()
+        {
+            IEnumerable<Employee> employee = EmployeeDbContext.employee;
+            return View(employee);
+        }
+    }
+}
